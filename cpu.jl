@@ -1,6 +1,5 @@
 using Base.Threads
 using BenchmarkTools
-using KernelAbstractions
 
 """
     stencil!(u, u_new, rhs, h)
