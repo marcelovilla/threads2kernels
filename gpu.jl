@@ -8,6 +8,8 @@ using KernelAbstractions
     end
 end
 
+# Alternatively, one can use Apple's Metal backend
+# backend = MetalBackend()
 backend = CPU()
 
 u = KernelAbstractions.zeros(backend, Float32, 100, 100);
