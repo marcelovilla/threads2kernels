@@ -7,7 +7,7 @@ using KernelAbstractions
 
 @kernel function rhs_kernel!(rhs, @Const(f), @Const(h))
     i, j = @index(Global, NTuple)
-    @inbounds rhs[i+1, j+1] = f(i * h, j * h)
+    @inbounds rhs[i+1, j+1] = f((i+1) * h, (j+1) * h)
 end
 
 @kernel function stencil_kernel!(u, u_new, @Const(rhs), @Const(h))
