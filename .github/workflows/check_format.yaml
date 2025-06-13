@@ -16,4 +16,4 @@ jobs:
 
       - name: Run formatter
         # Will fail if files are changed by the formatter
-        run: julia -e 'import JuliaFormatter; unchanged = JuliaFormatter.format("."); @assert unchanged'
+        run: julia -e 'import JuliaFormatter; unchanged = JuliaFormatter.format("."); @assert unchanged "Files need to be formatted"'
