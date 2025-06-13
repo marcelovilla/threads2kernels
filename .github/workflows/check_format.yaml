@@ -1,0 +1,19 @@
+name: check-format
+
+on:
+  push:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: julia-actions/cache@v2
+
+      - name: Install JuliaFormatter
+        run: julia  -e 'import Pkg; Pkg.add("JuliaFormatter")'
+        
+      - name: Run formatter
+        # Will fail if files are changed by the formatter
+        run: julia -e 'import JuliaFormatter; unchanged = JuliaFormatter.format("process.jl"); @assert unchanged'
