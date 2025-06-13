@@ -13,7 +13,7 @@ jobs:
 
       - name: Install JuliaFormatter
         run: julia  -e 'import Pkg; Pkg.add("JuliaFormatter")'
-        
+
       - name: Run formatter
         # Will fail if files are changed by the formatter
-        run: julia -e 'import JuliaFormatter; unchanged = JuliaFormatter.format("process.jl"); @assert unchanged'
+        run: julia -e 'import JuliaFormatter; unchanged = JuliaFormatter.format("."); @assert unchanged'
