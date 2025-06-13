@@ -32,12 +32,12 @@ Run the Jacobi method benchmark with the specified backend for different grid si
 Comonicon.@main function foobar(
     backend_name,
     output_name;
-    n_iter::Int=4096,
-    min_p::Int=2,
-    max_p::Int=14,
-    seconds::Float64=Inf, 
-    samples::Int=50, 
-    evals::Int=1
+    n_iter::Int = 4096,
+    min_p::Int = 2,
+    max_p::Int = 14,
+    seconds::Float64 = Inf,
+    samples::Int = 50,
+    evals::Int = 1,
 )
     if backend_name == "cpu"
         backend = CPU()
@@ -51,15 +51,16 @@ Comonicon.@main function foobar(
     f(x, y) = -2π^2 * sin(π * x) * sin(π * y)
 
     suite = BenchmarkGroup()
-    for p in min_p:max_p
+    for p = min_p:max_p
         N = 2^p
         u₀, rhs, h, stencil_kernel = setup(N, f, backend)
         # Make sure to copy u₀ at the start of every sample, so that it always starts from
         # the same initial condition. Otherwise, it will grab the solution from the previous
         # sample as jacobi! modifies u in place.
-        suite[N] = @benchmarkable jacobi!(u, $rhs, $h, $stencil_kernel, $n_iter) setup=(u = copy($u₀))
+        suite[N] = @benchmarkable jacobi!(u, $rhs, $h, $stencil_kernel, $n_iter) setup =
+            (u = copy($u₀))
     end
 
-    results = run(suite, seconds=seconds, samples=samples, evals=evals)
+    results = run(suite, seconds = seconds, samples = samples, evals = evals)
     BenchmarkTools.save(output_name, results)
 end
