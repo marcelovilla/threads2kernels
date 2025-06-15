@@ -1,0 +1,26 @@
+name: Run tests
+on:
+  push:
+    paths:
+      - ".github/workflows/test.yaml"
+      - "src/**"
+      - "test/**"
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: julia-actions/cache@v2
+
+      - name: Install Julia
+        uses: julia-actions/setup-julia@v1
+        with:
+          version: '1.11'
+
+      - name: Install dependencies
+        run: julia --project=. -e 'using Pkg; Pkg.instantiate()'
+
+      - name: Run tests
+        run: julia --project=. .test/runtests.jl
