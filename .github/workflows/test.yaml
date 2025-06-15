@@ -12,15 +12,13 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - uses: julia-actions/cache@v2
-
       - name: Install Julia
-        uses: julia-actions/setup-julia@v1
-        with:
-          version: '1.11'
+        uses: julia-actions/setup-julia@v2
+
+      - uses: julia-actions/cache@v2
 
       - name: Install dependencies
         run: julia --project=. -e 'using Pkg; Pkg.instantiate()'
 
       - name: Run tests
-        run: julia --project=. .test/runtests.jl
+        run: julia --project=. ./test/runtests.jl
