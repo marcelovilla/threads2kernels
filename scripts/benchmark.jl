@@ -22,21 +22,21 @@ Run the Jacobi method benchmark with the specified backend for different grid si
 
 # Options
 
-- `--n_iter <4096::Int>`: The number of iterations for the Jacobi method. Default=4096
-- `--min_p <2::Int>`: The minimum power of 2 for the grid size (2^p). Default=2
-- `--max_p <14::Int>`: The maximum power of 2 for the grid size (2^p). Default=14
+- `--n-iter <512::Int>`: The number of iterations for the Jacobi method. Default=512
+- `--min-p <2::Int>`: The minimum power of 2 for the grid size (2^p). Default=2
+- `--max-p <14::Int>`: The maximum power of 2 for the grid size (2^p). Default=14
 - `--seconds <Inf::Float64>`: The time budget for the benchmark. Default=Inf
-- `--samples <50::Int>`: The number of samples to run for each grid size. Default=50
+- `--samples <20::Int>`: The number of samples to run for each grid size. Default=20
 - `--evals <1::Int>`: The number of evaluations for each sample. Default=1
 """
 Comonicon.@main function foobar(
     backend_name,
     output_name;
-    n_iter::Int = 4096,
+    n_iter::Int = 512,
     min_p::Int = 2,
     max_p::Int = 14,
     seconds::Float64 = Inf,
-    samples::Int = 50,
+    samples::Int = 20,
     evals::Int = 1,
 )
     if backend_name == "cpu"
