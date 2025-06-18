@@ -1,5 +1,6 @@
 using BenchmarkTools
 using Comonicon
+using CUDA
 using KernelAbstractions
 
 include("../src/jacobi_ka.jl")
