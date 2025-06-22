@@ -2,6 +2,6 @@
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
-for nthreads in 1 2 4 8; do
+for nthreads in 1 2 4 8 16 32 64 128; do
     julia --project=. -t $nthreads ${SCRIPT_DIR}/cpu_benchmark.jl
 done
