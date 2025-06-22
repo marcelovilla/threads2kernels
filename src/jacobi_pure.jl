@@ -19,15 +19,13 @@ function jacobi!(u, rhs, h, n_iter)
 end
 
 function setup(N, f)
-    h = 1 / (N + 1)
     u = zeros(Float64, N, N)
-
-    # x and y coordinates are the same on a square grid
-    coords = h * (2:N-1)
-
-    # Only interior points are computed and boundaries are left as zero
     rhs = zeros(Float64, N, N)
-    rhs[2:N-1, 2:N-1] .= f.(coords', coords)
+
+    # boundaries are left as zero, so we only compute the interior points
+    h = 1 / (N + 1)
+    interior_points = h * (2:N-1)
+    rhs[2:N-1, 2:N-1] .= f.(interior_points', interior_points)
 
     return u, rhs, h
 end

@@ -1,4 +1,3 @@
-using BenchmarkTools
 using KernelAbstractions
 
 # Both kernel functions are meant to be run only on the interior points of the grid.
@@ -27,11 +26,11 @@ function jacobi!(u, rhs, h, kernel, n_iter)
 end
 
 function setup(N, f, backend)
-    h = 1 / (N + 1)
     u = KernelAbstractions.zeros(backend, Float64, N, N)
+    rhs = KernelAbstractions.zeros(backend, Float64, N, N)
 
     # Only interior points are computed and boundaries are left as zero
-    rhs = KernelAbstractions.zeros(backend, Float64, N, N)
+    h = 1 / (N + 1)
     rhs_kernel = rhs_kernel!(backend)
     rhs_kernel(rhs, f, h, ndrange = (N - 2, N - 2))
 
