@@ -1,0 +1,390 @@
+[
+    {
+        "Julia": "1.11.5",
+        "BenchmarkTools": {
+            "major": 1,
+            "minor": 6,
+            "patch": 0,
+            "prerelease": [],
+            "build": []
+        }
+    },
+    [
+        [
+            "BenchmarkGroup",
+            {
+                "data": {
+                    "cuda": [
+                        "BenchmarkGroup",
+                        {
+                            "data": {
+                                "2.56E+08": [
+                                    "Trial",
+                                    {
+                                        "allocs": 35019,
+                                        "gctimes": [
+                                            0.0,
+                                            0.0,
+                                            0.0,
+                                            0.0,
+                                            0.0,
+                                            0.0,
+                                            0.0,
+                                            0.0,
+                                            0.0,
+                                            0.0
+                                        ],
+                                        "memory": 1024432,
+                                        "params": [
+                                            "Parameters",
+                                            {
+                                                "gctrial": true,
+                                                "time_tolerance": 0.05,
+                                                "evals_set": false,
+                                                "samples": 10,
+                                                "evals": 1,
+                                                "gcsample": false,
+                                                "seconds": null,
+                                                "overhead": 0.0,
+                                                "memory_tolerance": 0.01
+                                            }
+                                        ],
+                                        "times": [
+                                            5.486439e6,
+                                            8.235783e6,
+                                            2.144251506e9,
+                                            2.258058176e9,
+                                            2.255528429e9,
+                                            2.25764522e9,
+                                            2.257702925e9,
+                                            2.258028383e9,
+                                            2.25590754e9,
+                                            2.257735548e9
+                                        ]
+                                    }
+                                ],
+                                "8.00E+06": [
+                                    "Trial",
+                                    {
+                                        "allocs": 35019,
+                                        "gctimes": [
+                                            0.0,
+                                            0.0,
+                                            0.0,
+                                            0.0,
+                                            0.0,
+                                            0.0,
+                                            0.0,
+                                            0.0,
+                                            0.0,
+                                            0.0
+                                        ],
+                                        "memory": 1024432,
+                                        "params": [
+                                            "Parameters",
+                                            {
+                                                "gctrial": true,
+                                                "time_tolerance": 0.05,
+                                                "evals_set": false,
+                                                "samples": 10,
+                                                "evals": 1,
+                                                "gcsample": false,
+                                                "seconds": null,
+                                                "overhead": 0.0,
+                                                "memory_tolerance": 0.01
+                                            }
+                                        ],
+                                        "times": [
+                                            1.514974038e9,
+                                            1.26173948e8,
+                                            7.383913e7,
+                                            7.3832077e7,
+                                            7.3843868e7,
+                                            7.381741e7,
+                                            7.3830625e7,
+                                            7.3853753e7,
+                                            7.3738207e7,
+                                            7.380088e7
+                                        ]
+                                    }
+                                ],
+                                "4.00E+06": [
+                                    "Trial",
+                                    {
+                                        "allocs": 35019,
+                                        "gctimes": [
+                                            0.0,
+                                            0.0,
+                                            0.0,
+                                            0.0,
+                                            0.0,
+                                            0.0,
+                                            0.0,
+                                            0.0,
+                                            0.0,
+                                            0.0
+                                        ],
+                                        "memory": 1024432,
+                                        "params": [
+                                            "Parameters",
+                                            {
+                                                "gctrial": true,
+                                                "time_tolerance": 0.05,
+                                                "evals_set": false,
+                                                "samples": 10,
+                                                "evals": 1,
+                                                "gcsample": false,
+                                                "seconds": null,
+                                                "overhead": 0.0,
+                                                "memory_tolerance": 0.01
+                                            }
+                                        ],
+                                        "times": [
+                                            5.298144e6,
+                                            5.218608e6,
+                                            2.6581794e7,
+                                            3.8046925e7,
+                                            3.8093327e7,
+                                            3.8081604e7,
+                                            3.8124037e7,
+                                            3.8097239e7,
+                                            3.8102569e7,
+                                            3.8094867e7
+                                        ]
+                                    }
+                                ],
+                                "3.20E+07": [
+                                    "Trial",
+                                    {
+                                        "allocs": 35019,
+                                        "gctimes": [
+                                            0.0,
+                                            0.0,
+                                            0.0,
+                                            0.0,
+                                            0.0,
+                                            0.0,
+                                            0.0,
+                                            0.0,
+                                            0.0,
+                                            0.0
+                                        ],
+                                        "memory": 1024432,
+                                        "params": [
+                                            "Parameters",
+                                            {
+                                                "gctrial": true,
+                                                "time_tolerance": 0.05,
+                                                "evals_set": false,
+                                                "samples": 10,
+                                                "evals": 1,
+                                                "gcsample": false,
+                                                "seconds": null,
+                                                "overhead": 0.0,
+                                                "memory_tolerance": 0.01
+                                            }
+                                        ],
+                                        "times": [
+                                            5.315191e6,
+                                            5.208933e6,
+                                            2.68494219e8,
+                                            2.86067179e8,
+                                            2.85854123e8,
+                                            2.8596779e8,
+                                            2.85970219e8,
+                                            2.86119527e8,
+                                            2.86067616e8,
+                                            2.85886063e8
+                                        ]
+                                    }
+                                ],
+                                "1.28E+08": [
+                                    "Trial",
+                                    {
+                                        "allocs": 35019,
+                                        "gctimes": [
+                                            0.0,
+                                            0.0,
+                                            0.0,
+                                            0.0,
+                                            0.0,
+                                            0.0,
+                                            0.0,
+                                            1.993042e6,
+                                            0.0,
+                                            0.0
+                                        ],
+                                        "memory": 1024432,
+                                        "params": [
+                                            "Parameters",
+                                            {
+                                                "gctrial": true,
+                                                "time_tolerance": 0.05,
+                                                "evals_set": false,
+                                                "samples": 10,
+                                                "evals": 1,
+                                                "gcsample": false,
+                                                "seconds": null,
+                                                "overhead": 0.0,
+                                                "memory_tolerance": 0.01
+                                            }
+                                        ],
+                                        "times": [
+                                            5.379446e6,
+                                            6.27397484e8,
+                                            1.133469118e9,
+                                            1.133179275e9,
+                                            1.133148902e9,
+                                            1.133324891e9,
+                                            1.133352769e9,
+                                            1.133153293e9,
+                                            1.133297669e9,
+                                            1.13308428e9
+                                        ]
+                                    }
+                                ],
+                                "6.40E+07": [
+                                    "Trial",
+                                    {
+                                        "allocs": 35019,
+                                        "gctimes": [
+                                            0.0,
+                                            0.0,
+                                            0.0,
+                                            0.0,
+                                            0.0,
+                                            0.0,
+                                            0.0,
+                                            0.0,
+                                            0.0,
+                                            0.0
+                                        ],
+                                        "memory": 1024432,
+                                        "params": [
+                                            "Parameters",
+                                            {
+                                                "gctrial": true,
+                                                "time_tolerance": 0.05,
+                                                "evals_set": false,
+                                                "samples": 10,
+                                                "evals": 1,
+                                                "gcsample": false,
+                                                "seconds": null,
+                                                "overhead": 0.0,
+                                                "memory_tolerance": 0.01
+                                            }
+                                        ],
+                                        "times": [
+                                            4.12261073e8,
+                                            5.86463934e8,
+                                            5.66929788e8,
+                                            5.67138178e8,
+                                            5.66948884e8,
+                                            5.67102914e8,
+                                            5.6733263e8,
+                                            5.67123179e8,
+                                            5.67206347e8,
+                                            5.6710398e8
+                                        ]
+                                    }
+                                ],
+                                "5.12E+08": [
+                                    "Trial",
+                                    {
+                                        "allocs": 35019,
+                                        "gctimes": [
+                                            0.0,
+                                            0.0,
+                                            0.0,
+                                            0.0,
+                                            0.0,
+                                            0.0,
+                                            0.0,
+                                            0.0,
+                                            0.0,
+                                            0.0
+                                        ],
+                                        "memory": 1024432,
+                                        "params": [
+                                            "Parameters",
+                                            {
+                                                "gctrial": true,
+                                                "time_tolerance": 0.05,
+                                                "evals_set": false,
+                                                "samples": 10,
+                                                "evals": 1,
+                                                "gcsample": false,
+                                                "seconds": null,
+                                                "overhead": 0.0,
+                                                "memory_tolerance": 0.01
+                                            }
+                                        ],
+                                        "times": [
+                                            5.363346e6,
+                                            4.249912908e9,
+                                            4.501536179e9,
+                                            4.501410369e9,
+                                            4.501408322e9,
+                                            4.50133357e9,
+                                            4.50141966e9,
+                                            4.50139321e9,
+                                            4.501528041e9,
+                                            4.501394085e9
+                                        ]
+                                    }
+                                ],
+                                "1.60E+07": [
+                                    "Trial",
+                                    {
+                                        "allocs": 35019,
+                                        "gctimes": [
+                                            0.0,
+                                            0.0,
+                                            0.0,
+                                            0.0,
+                                            0.0,
+                                            0.0,
+                                            0.0,
+                                            0.0,
+                                            0.0,
+                                            0.0
+                                        ],
+                                        "memory": 1024432,
+                                        "params": [
+                                            "Parameters",
+                                            {
+                                                "gctrial": true,
+                                                "time_tolerance": 0.05,
+                                                "evals_set": false,
+                                                "samples": 10,
+                                                "evals": 1,
+                                                "gcsample": false,
+                                                "seconds": null,
+                                                "overhead": 0.0,
+                                                "memory_tolerance": 0.01
+                                            }
+                                        ],
+                                        "times": [
+                                            3.776683087e9,
+                                            2.92527934e8,
+                                            1.44170385e8,
+                                            1.44169762e8,
+                                            1.44191667e8,
+                                            1.44127794e8,
+                                            1.44175084e8,
+                                            1.44299793e8,
+                                            1.44229928e8,
+                                            1.4412933e8
+                                        ]
+                                    }
+                                ]
+                            },
+                            "tags": []
+                        }
+                    ]
+                },
+                "tags": []
+            }
+        ]
+    ]
+]
