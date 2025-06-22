@@ -2,10 +2,19 @@ using Base.Threads
 
 function stencil!(u, u_new, rhs, h)
     M, N = size(u)
-    @threads for j = 2:N-1
+    @threads :static for j = 2:N-1
         for i = 2:M-1
             @inbounds u_new[i, j] =
                 0.25 * (u[i+1, j] + u[i-1, j] + u[i, j+1] + u[i, j-1] - h^2 * rhs[i, j])
+        end
+    end
+end
+
+function init_rhs!(rhs, f, h)
+    M, N = size(rhs)
+    @threads :static for j = 2:N-1
+        for i = 2:M-1
+            @inbounds rhs[i, j] = f(i * h, j * h)
         end
     end
 end
@@ -24,8 +33,7 @@ function setup(N, f)
 
     # boundaries are left as zero, so we only compute the interior points
     h = 1 / (N + 1)
-    interior_points = h * (2:N-1)
-    rhs[2:N-1, 2:N-1] .= f.(interior_points', interior_points)
+    init_rhs!(rhs, f, h)
 
     return u, rhs, h
 end
