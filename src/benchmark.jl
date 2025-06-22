@@ -6,12 +6,12 @@ include(joinpath(@__DIR__, "jacobi_ka.jl"))
 function run_benchmark_suite(
     backend,
     output_path,
-    problem_sizes;
-    n_iter = 1,
-    seconds = Inf,
-    samples = 20,
-    evals = 1,
-    suite_key = "default",
+    problem_sizes,
+    n_iter,
+    seconds,
+    samples,
+    evals,
+    suite_key,
 )
 
     # Instead of creating a new file for each run, we load the existing results and append
