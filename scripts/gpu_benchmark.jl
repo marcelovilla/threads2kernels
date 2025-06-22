@@ -10,9 +10,9 @@ run_benchmark_suite(
     backend,
     joinpath(dirname(@__DIR__), "results/gpu.json"),
     problem_sizes;
-    n_iter = 1,
+    n_iter = 500,
     seconds = Inf,
-    samples = 20,
+    samples = 10,
     evals = 1,
     suite_key = "cuda",
 )
