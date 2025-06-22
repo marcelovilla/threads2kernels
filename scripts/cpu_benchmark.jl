@@ -4,7 +4,7 @@ using ThreadPinning
 
 include(joinpath(dirname(@__DIR__), "src/benchmark.jl"))
 
-problem_sizes = Int[4e6, 8e6, 16e6, 32e6, 64e6, 128e6, 256e6, 512e6]
+problem_sizes = Int[1e6, 2e6, 4e6, 8e6, 16e6, 32e6, 64e6]
 
 backend = CPU(; static = true)
 ThreadPinning.pinthreads(:numa)
